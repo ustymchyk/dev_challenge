@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.watch {
+  position: relative;
+  width: 256px;
+  height: 256px;
+  border: 1px solid red;
+  margin: auto;
+  display: flex;
+  border-radius: 100%;
+
+  background: linear-gradient(180deg, #757575 0%, #1D1D1B 100%);
+  border: 2px solid #1F272A;
+  box-sizing: border-box;
+  box-shadow: inset 1px 2px 0px rgba(255, 255, 255, 0.2);
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 86.71%;
+    height: 86.71%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: inset 1px 1px 0px rgba(47, 47, 80, 0.2);
+    border-radius: 100%;
+    border: 2px solid #1F272A;
+  }
+
+  svg {
+    position: relative;
+    z-index: 2;
+    width: 84.76%;
+    height: 84.76%;
+    margin: auto;
+  }
+
+  //todo перед відправкою замінити calc
+  &__min {
+    stroke: #000;
+    stroke-dasharray: 1 calc((3.1415 * 126 * 2 - 60) / 60);
+    stroke-dashoffset: 1;
+    stroke-width: 5;
+    fill: transparent;
+  }
+  &__hour {
+    stroke: #000;
+    stroke-dasharray: 3 calc((3.1415 * 123 * 2 - 3 * 12) / 12);
+    stroke-dashoffset: 2;
+    stroke-width: 12;
+    fill: transparent;
+  }
+}
