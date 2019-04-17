@@ -72,6 +72,7 @@ html {
         z-index: 2;
         width: 100%;
         height: 100%;
+        transform: rotate(120deg);
 
         &::after {
             content: '';
@@ -90,12 +91,48 @@ html {
     }
     &__arr-hour {
         position: absolute;
+        z-index: 2;
         width: 100%;
         height: 100%;
-        top: -50%;
+        transform: rotate(30deg);
 
+        
         svg {
-            width: 100%;
+            position: absolute;
+            top: 28.5%;
+            left: calc(50% - 2.34% / 2);
+            height: 27.7%;
+            width: 2.34%;
+
+            stroke-width: 2px;
         }
+    }
+    &__arr-min {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+
+        transform: rotate(-30deg);
+        
+        svg {
+            position: absolute;
+            top: 20.31%;
+            left: calc(50% - 2.34% / 2);
+            height: 35.54%;
+            width: 2.34%;
+
+            stroke-width: 2px;
+        }
+    }
+    &__cap {
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        width: 5%;
+        height: 5%;
+        transform: translate(-50%, -50%);
+        
     }
 }
