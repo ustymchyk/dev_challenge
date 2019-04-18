@@ -12,44 +12,85 @@ html {
   justify-content: center; }
 
 .watch {
+  --sec: 0;
+  --min: 0;
+  --hour: 0;
   position: relative;
   width: 256px;
-  height: 256px;
-  border: 1px solid red;
-  margin: auto;
-  display: flex;
-  border-radius: 100%;
-  background: linear-gradient(180deg, #757575 0%, #1D1D1B 100%);
-  border: 2px solid #1F272A;
-  box-sizing: border-box;
-  box-shadow: inset 1px 2px 0px rgba(255, 255, 255, 0.2); }
+  outline: none; }
+  .watch:focus {
+    border-radius: 100%;
+    box-shadow: 0 0 0 5px lightblue; }
   .watch::after {
     content: '';
+    display: block;
+    padding-top: 100%; }
+  .watch__body {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 86.71%;
-    height: 86.71%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    box-shadow: inset 1px 1px 0px rgba(47, 47, 80, 0.2);
-    border-radius: 100%;
-    border: 2px solid #1F272A; }
-  .watch svg {
-    position: relative;
-    z-index: 2;
-    width: 84.76%;
-    height: 84.76%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     margin: auto; }
   .watch__min {
-    stroke: #000;
-    stroke-dasharray: 1 calc((3.1415 * 126 * 2 - 60) / 60);
+    stroke: #1a1917;
+    stroke-dasharray: 1 calc((3.1415 * 105 * 2 - 60) / 60);
     stroke-dashoffset: 1;
     stroke-width: 5;
     fill: transparent; }
   .watch__hour {
-    stroke: #000;
-    stroke-dasharray: 3 calc((3.1415 * 123 * 2 - 3 * 12) / 12);
+    stroke: #1a1917;
+    stroke-dasharray: 3 calc((3.1415 * 102 * 2 - 3 * 12) / 12);
     stroke-dashoffset: 2;
     stroke-width: 12;
     fill: transparent; }
+  .watch__arr-sec {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
+    height: 100%;
+    animation: sec 60s linear infinite;
+    stroke: #e9343f;
+    stroke-width: 3px;
+    stroke-linejoin: round;
+    stroke-linecap: round; }
+  .watch__arr-hour, .watch__arr-min {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
+    height: 100%;
+    stroke: #050606;
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    stroke-linecap: round; }
+  .watch__arr-min {
+    animation: min 3600s linear infinite; }
+  .watch__arr-hour {
+    animation: hour 43200s linear infinite; }
+  .watch__cap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 6%;
+    height: 6%; }
+
+@keyframes sec {
+  0% {
+    transform: translateX(-50%) rotate(var(--sec)); }
+  100% {
+    transform: translateX(-50%) rotate(calc(var(--sec) + 360deg)); } }
+
+@keyframes min {
+  0% {
+    transform: translateX(-50%) rotate(var(--min)); }
+  100% {
+    transform: translateX(-50%) rotate(calc(var(--min) + 360deg)); } }
+
+@keyframes hour {
+  0% {
+    transform: translateX(-50%) rotate(var(--hour)); }
+  100% {
+    transform: translateX(-50%) rotate(calc(var(--hour) + 360deg)); } }
