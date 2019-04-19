@@ -2,61 +2,64 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dev challenge</title>
-    <link rel="stylesheet" href="styles.css"> 
-</head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Simple lightweight clock">
+  <title>Dev challenge</title>
+  <link rel="stylesheet" href="styles.css">
+  <!--  text=1234567890 - тільки числові символи-->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700&text=1234567890" rel="stylesheet">
+</head>
 
 <body>
-    <div class="watch" tabindex="0">
-        <div class="watch__body">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="watch__body" viewbox="0 0 256 256">
-                <lineargradient id="fill" x2="0%" y2="100%">
-                    <stop offset="0%" stop-color="#757575" />
-                    <stop offset="100%" stop-color="#1D1D1B" />
-                </lineargradient> 
-                <circle cx="50%" cy="50%" r="127" stroke="#1F272A" fill="url(#fill)" stroke-width="2"></circle>
-                <circle cx="50%" cy="50%" r="113" stroke="#1F272A" fill="#fff" stroke-width="2"></circle>
-                <circle class="watch__min" cx="50%" cy="50%" r="105" />
-                <circle class="watch__hour" cx="50%" cy="50%" r="102" />
-                <text x="120" y="46" class="watch__number">12</text>
-                <text x="170" y="59" class="watch__number">1</text>
-                <text x="202" y="91" class="watch__number">2</text>
-                <text x="215" y="133" class="watch__number">3</text>
-                <text x="201" y="176" class="watch__number">4</text>
-                <text x="170" y="207" class="watch__number">5</text>
-                <text x="124" y="221" class="watch__number">6</text>
-                <text x="78" y="208" class="watch__number">7</text>
-                <text x="47" y="176" class="watch__number">8</text>
-                <text x="34" y="133" class="watch__number">9</text>
-                <text x="45" y="92" class="watch__number">10</text>
-                <text x="79" y="58" class="watch__number">11</text>
-            </svg>
-            <svg class="watch__arr-hour" version="1.1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 6 256">
-                <polyline points="2 74, 4 74, 5 144, 1 144, 2 74" />
-            </svg>
-            <svg class="watch__arr-min" version="1.1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 6 256">
-                <polyline points="2 54, 4 54, 5 143, 1 143, 2 54" />
-            </svg>
-            <svg class="watch__arr-sec" version="1.1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 3 256">
-                <polyline points="1.5 42, 1.5 142" />
-            </svg>
-            <svg class="watch__cap" version="1.1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 14 14">
-                <lineargradient id="fill_cap" x2="0%" y2="100%">
-                    <stop offset="0%" stop-color="#FFFFFF" />
-                    <stop offset="100%" stop-color="#BFBFBF" />
-                </lineargradient>
-                <lineargradient id="stroke_cap" x2="0%" y2="100%">
-                    <stop offset="0%" stop-color="#FFFFFF" />
-                    <stop offset="100%" stop-color="#757575" />
-                </lineargradient>
-                <circle cx="7" cy="7" r="6" stroke-width="1" fill="url(#fill_cap)" stroke="url(#stroke_cap)"></circle>
-            </svg>
-        </div>
+  <div class="watch" tabindex="0">
+    <div class="watch__body">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="watch__body" viewbox="0 0 256 256">
+        <lineargradient id="fill" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#757575" />
+          <stop offset="100%" stop-color="#1D1D1B" />
+        </lineargradient>
+        <circle cx="50%" cy="50%" r="127" stroke="#1F272A" fill="url(#fill)" stroke-width="2"></circle>
+        <circle cx="50%" cy="50%" r="113" stroke="#1F272A" fill="#fff" stroke-width="2"></circle>
+        <circle class="watch__min" cx="50%" cy="50%" r="105" />
+        <circle class="watch__hour" cx="50%" cy="50%" r="102" />
+        <text x="120" y="46">12</text>
+        <text x="170" y="59">1</text>
+        <text x="202" y="91">2</text>
+        <text x="215" y="133">3</text>
+        <text x="201" y="176">4</text>
+        <text x="170" y="207">5</text>
+        <text x="124" y="221">6</text>
+        <text x="78" y="208">7</text>
+        <text x="47" y="176">8</text>
+        <text x="34" y="133">9</text>
+        <text x="45" y="92">10</text>
+        <text x="79" y="58">11</text>
+      </svg>
+      <svg class="watch__arr-hour" version="1.1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 6 256">
+        <polyline points="2 74, 4 74, 5 144, 1 144, 2 74" />
+      </svg>
+      <svg class="watch__arr-min" version="1.1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 6 256">
+        <polyline points="2 54, 4 54, 5 143, 1 143, 2 54" />
+      </svg>
+      <svg class="watch__arr-sec" version="1.1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 3 256">
+        <polyline points="1.5 42, 1.5 142" />
+      </svg>
+      <svg class="watch__cap" version="1.1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 14 14">
+        <lineargradient id="fill_cap" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#FFFFFF" />
+          <stop offset="100%" stop-color="#BFBFBF" />
+        </lineargradient>
+        <lineargradient id="stroke_cap" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#FFFFFF" />
+          <stop offset="100%" stop-color="#757575" />
+        </lineargradient>
+        <circle cx="7" cy="7" r="6" stroke-width="1" fill="url(#fill_cap)" stroke="url(#stroke_cap)"></circle>
+      </svg>
     </div>
-    <script src="./main.js"></script>
+  </div>
+  <script src="./main.js"></script>
 </body>
 
 </html>

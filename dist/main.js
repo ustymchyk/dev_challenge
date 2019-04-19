@@ -1,0 +1,1 @@
+"use strict";document.addEventListener("DOMContentLoaded",function(){var e,t,n,o,c=document.querySelector(".watch");e=new Date,t=e.getSeconds()/60*360,n=e.getMinutes()/60*360,o=e.getHours()/12*360,c.style.setProperty("--sec","".concat(t,"deg")),c.style.setProperty("--min","".concat(n,"deg")),c.style.setProperty("--hour","".concat(o,"deg"))});

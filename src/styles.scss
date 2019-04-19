@@ -2,22 +2,27 @@ body,
 html {
   width: 100%;
   min-height: 100%;
-  display: flex; 
+  display: flex;
   align-items: center;
-  justify-content: center; 
-} 
+  justify-content: center;
+}
 
-.watch { 
+.watch {
   --sec: 0;
-  --min: 0; 
+  --min: 0;
   --hour: 0;
+
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  font-display: swap;
 
   margin: 0;
   padding: 0;
-
   box-sizing: border-box;
 
   position: relative;
+  // ширина вказана для прикладу, дефолтне значення - 100%, щоб годинник був выд розмыр контейнера    
   width: 256px;
 
   outline: none;
@@ -44,7 +49,9 @@ html {
 
   &__min {
     stroke: #1a1917;
-    stroke-dasharray: 1 calc((3.1415 * 105 * 2 - 60) / 60);
+    // обрахунок
+    // stroke-dasharray: 1 calc((3.1415 * 105 * 2 - 60) / 60);
+    stroke-dasharray: 1 9.99525;
     stroke-dashoffset: 1;
     stroke-width: 5;
 
@@ -53,7 +60,8 @@ html {
 
   &__hour {
     stroke: #1a1917;
-    stroke-dasharray: 3 calc((3.1415 * 102 * 2 - 3 * 12) / 12);
+    // stroke-dasharray: 3 calc((3.1415 * 102 * 2 - 3 * 12) / 12);
+    stroke-dasharray: 3 50.4055;
     stroke-dashoffset: 2;
     stroke-width: 12;
 
@@ -107,11 +115,9 @@ html {
     width: 6%;
     height: 6%;
   }
-  &__number {
-      font-weight: 700;
-  }
 }
 
+// можливо було згенерувати ці кейфрейми js`ом, але я обрав відмову від IE11 для чистоти коду
 @keyframes sec {
   0% {
     transform: translateX(-50%) rotate(var(--sec))
